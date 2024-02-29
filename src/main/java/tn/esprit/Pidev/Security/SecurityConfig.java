@@ -33,9 +33,9 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(h->h.frameOptions(fr->fr.disable()))
                 .authorizeHttpRequests(ar -> ar.requestMatchers("**").permitAll())
-                //.authorizeHttpRequests(ar->ar.requestMatchers("/api/products/**").hasAuthority("ADMIN"))
                 .authorizeHttpRequests(ar -> ar.anyRequest().authenticated())
                 .oauth2ResourceServer(o2->o2.jwt(jwt->jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+                .oauth2Login(Customizer.withDefaults())
                 .build();
     }
 
