@@ -1,15 +1,13 @@
 package tn.esprit.Pidev.Controllers;
 
 
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tn.esprit.Pidev.Entities.Product;
-import tn.esprit.Pidev.Repository.ProductRepository;
+import tn.esprit.Pidev.Repository.UserRepository;
 
 import java.util.List;
 
@@ -17,8 +15,8 @@ import java.util.List;
 @RequestMapping("/api")
 public class ProductController {
 
-    private ProductRepository productRepository;
-    public ProductController(ProductRepository productRepository){
+    private UserRepository productRepository;
+    public ProductController(UserRepository productRepository){
         this.productRepository =productRepository ;
     }
 
