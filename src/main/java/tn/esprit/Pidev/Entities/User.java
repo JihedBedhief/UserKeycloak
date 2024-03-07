@@ -29,7 +29,7 @@ public class User {
     private String password;
     private Long phoneNumber;
     private String email;
-    private Byte[] img;
+    //private Byte[] img;
 
 
 }
