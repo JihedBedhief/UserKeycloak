@@ -17,19 +17,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "_user")
+@Table(name = "_user_Info")
 public class User {
+
     @jakarta.persistence.Id
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String fisrtName;
-    private String lastName;
-    private Date birthDate;
-    private String password;
+    private String id;
     private Long phoneNumber;
-    private String email;
-    //private Byte[] img;
+    private String adress ;
+
+
 
 
 }
